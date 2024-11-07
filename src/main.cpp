@@ -3,17 +3,15 @@
 #include <time.h>
 #include <SPIFFS.h>
 #include <ArduinoJson.h>
+#include "config.h"
 
 // Wi-Fi credentials
-const char* ssid = "Airtel_shes_4759";
-const char* password = "Air@24628";
+const char* ssid = WIFI_NAME;
+const char* password = WIFI_PASS;
 
 // Telegram API details
-const String telegramBotToken = "8071340273:AAHCDClqDfpq2CZUv3oQpJl2LE6yU0JXPNg"; 
-// const String telegramChatId = "7179601736"; 
-// grp id = 1002337893529
-const String telegramChatId = "-1002337893529"; //grp id
-
+const String telegramBotToken = TELEGRAM_BOT_TOKEN; 
+const String telegramChatId = TELEGRAM_GRP_CHAT_ID;
 // NTP server settings
 const char* ntpServer = "pool.ntp.org";
 const long gmtOffset_sec = 19800;    // Changed to 5 hours 30 minutes (5*3600 + 30*60)

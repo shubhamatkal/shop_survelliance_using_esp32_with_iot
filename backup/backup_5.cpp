@@ -2,14 +2,15 @@
 #include <HTTPClient.h>
 #include <time.h>
 #include <SPIFFS.h>
+#include "config.h"
 
 // Wi-Fi credentials
-const char* ssid = "realme";
-const char* password = "shubhamatkall";
+const char* ssid = WIFI_NAME;
+const char* password = WIFI_PASS;
 
 // Telegram API details
-const String telegramBotToken = "8071340273:AAHCDClqDfpq2CZUv3oQpJl2LE6yU0JXPNg"; 
-const String telegramChatId = "7179601736"; // Replace with your actual chat ID
+const String telegramBotToken = TELEGRAM_BOT_TOKEN; 
+const String telegramChatId = TELEGRAM_GRP_CHAT_ID;
 
 // NTP server settings
 const char* ntpServer = "pool.ntp.org";

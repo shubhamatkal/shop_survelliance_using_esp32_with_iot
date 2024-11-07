@@ -1,14 +1,15 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <WiFiClientSecure.h>
+#include "config.h"
 
 // Wi-Fi credentials
-const char* ssid = "realme";
-const char* password = "shubhamatkall";
+const char* ssid = WIFI_NAME;
+const char* password = WIFI_PASS;
 
-// Telegram Bot Token
-const String botToken = "8071340273:AAHCDClqDfpq2CZUv3oQpJl2LE6yU0JXPNg"; // Replace with your actual bot token
-const String chat_id = "7179601736"; // Replace with your actual chat ID
+// Telegram API details
+const String telegramBotToken = TELEGRAM_BOT_TOKEN; 
+const String telegramChatId = TELEGRAM_GRP_CHAT_ID;
 
 // PIR sensor pin
 const int pirPin = 13; // GPIO pin connected to PIR sensor OUT
